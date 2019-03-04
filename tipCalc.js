@@ -19,4 +19,11 @@ function totalAmount(bill, service) {
     let totalPrice = tipAmount(`${bill}`, `${service}`) + bill;
     return totalPrice
 }
-totalAmount(100,'good');
+
+function splitAmount(bill, service, people) {
+    let totalPrice = tipAmount(`${bill}`, `${service}`) + bill;
+    let howMany = Number(`${people}`)
+    let split = totalPrice/howMany
+    return split
+}
+splitAmount(100, 'good', 5);
