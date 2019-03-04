@@ -1,8 +1,8 @@
 
 function tipAmount(bill, service)  {
     let price = '';
-    let foodPrice = Number(`${bill}`);
-    let satisfaction = `${service}`;
+    let foodPrice = Number(bill);
+    let satisfaction = service;
     if (satisfaction === "good") {
         price = foodPrice * .20;
     }
@@ -16,13 +16,13 @@ function tipAmount(bill, service)  {
 }
 
 function totalAmount(bill, service) {
-    let totalPrice = tipAmount(`${bill}`, `${service}`) + bill;
+    let totalPrice = tipAmount(bill, service) + bill;
     return totalPrice
 }
 
 function splitAmount(bill, service, people) {
-    let totalPrice = tipAmount(`${bill}`, `${service}`) + bill;
-    let howMany = Number(`${people}`)
+    let totalPrice = tipAmount(bill, service) + bill;
+    let howMany = Number(people)
     let split = totalPrice/howMany
     return split
 }
