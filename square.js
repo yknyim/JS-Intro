@@ -1,9 +1,14 @@
 
 function printSquare(stars) {
-    for (i=0; i <= stars.length; i++) {
-        star = '';
-        
+    let star = '';
+    for (let i=1; i <= stars; i++) {
+        star += "*";
     }
+    let box = star;
+    for (let x = 1; x <= stars; x++) {
+        console.log(box);
+    }
+
 }
 
 printSquare(5);
